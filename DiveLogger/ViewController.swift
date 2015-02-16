@@ -23,7 +23,16 @@ class ViewController: UIViewController {
     }
     
     override func viewDidAppear(animated: Bool) {
-        self.performSegueWithIdentifier("goto_login", sender: self)
+        super.viewDidAppear(animated)
+        let prefs:NSUserDefaults = NSUserDefaults.standardUserDefaults()
+        //TODO: Move this to a constants manager
+        let isLoggedIn:Int = prefs.integerForKey("ISLOGGEDIN") as Int
+        if (isLoggedIn != 1) {
+            self.performSegueWithIdentifier("goto_login", sender: self)
+        }
+        else {
+            self.lblUsername.text = prefs.valueForKey("USERNAME") as NSString
+        }
     }
 
     @IBAction func logout(sender: UIButton) {

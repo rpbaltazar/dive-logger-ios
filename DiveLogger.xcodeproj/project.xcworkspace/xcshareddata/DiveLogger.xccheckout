@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>B24A7A14-A32A-4891-8858-C97D7E5C2DCA</string>
+	<key>IDESourceControlProjectName</key>
+	<string>DiveLogger</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>F808A1828D8C12F5BE4BDE08CF2E38B5CCFC0C90</key>
+		<string>github.com:rpbaltazar/dive-logger-ios.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>DiveLogger.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>F808A1828D8C12F5BE4BDE08CF2E38B5CCFC0C90</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:rpbaltazar/dive-logger-ios.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>F808A1828D8C12F5BE4BDE08CF2E38B5CCFC0C90</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>F808A1828D8C12F5BE4BDE08CF2E38B5CCFC0C90</string>
+			<key>IDESourceControlWCCName</key>
+			<string>DiveLogger</string>
+		</dict>
+	</array>
+</dict>
+</plist>

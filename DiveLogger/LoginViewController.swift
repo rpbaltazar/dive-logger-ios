@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class LoginViewController: UIViewController {
 
@@ -26,9 +27,35 @@ class LoginViewController: UIViewController {
     
 
     @IBAction func login(sender: UIButton) {
+        let params = [
+            "email": txtEmail,
+            "password": txtPassword,
+        ]
         
+        var dataRes:NSDictionary!
+        
+        Alamofire.request(.POST, "http://192.168.1.19:3000/api/v1/sessions", parameters: params, encoding: .JSON)
+            .responseJSON() {
+                (request, response, data, error) in
+                let statusCode = response?.statusCode
+                
+                dataRes = data as NSDictionary
+                if (statusCode >= 200 && statusCode < 300){
+                    //login successfully
+                    //store logged in
+                    self.dismissViewControllerAnimated(true, completion: nil)
+                }
+                else {
+                    //login error
+                    var alertView:UIAlertView = UIAlertView()
+                    alertView.title = "Sign in Failed!"
+                    alertView.message = "Incorrect email or password"
+                    alertView.delegate = self
+                    alertView.addButtonWithTitle("OK")
+                    alertView.show()
+                }
+        }
     }
-    
     
     /*
     // MARK: - Navigation

@@ -7,11 +7,14 @@
 //
 
 import UIKit
+//TODO: Move Alamofire to a restServiceHandler
+import Alamofire
 
 class SignupViewController: UIViewController {
 
     @IBOutlet weak var txtEmail: UITextField!
     @IBOutlet weak var txtPassword: UITextField!
+    @IBOutlet weak var lblErrorMessage: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +28,41 @@ class SignupViewController: UIViewController {
     }
     
     @IBAction func register(sender: UIButton) {
+        var email:NSString = txtEmail.text as NSString
+        var password:NSString = txtPassword.text as NSString
+        
+        if (email.isEqualToString("") || password.isEqualToString("") ){
+            lblErrorMessage.text = "Please fill in both fields"
+            lblErrorMessage.textColor = UIColor.redColor()
+        }
+        else {
+            let params = [
+                "email": email,
+                "password": password,
+                "password_confirmation": password
+            ]
+            var dataRes:NSDictionary!
+            
+            Alamofire.request(.POST, "http://192.168.1.19:3000/api/v1/registrations", parameters: params, encoding: .JSON)
+                .responseJSON() {
+                (request, response, data, error) in
+                    let statusCode = response?.statusCode
+                    
+                    dataRes = data as NSDictionary
+                    if (statusCode >= 200 && statusCode < 300){
+                        //registered successfully
+                        NSLog("ALL ok: %d", dataRes["id"] as Int)
+                        self.dismissViewControllerAnimated(true, completion: nil)
+                    }
+                    else {
+                        var errorsList:NSDictionary = dataRes["error"] as NSDictionary
+                        var emailErrors:NSArray = errorsList["email"] as NSArray
+                        var passwordErrors:NSArray = errorsList["password"] as NSArray
+                        println(emailErrors)
+                        println(passwordErrors)
+                    }
+                }
+        }
     }
 
     @IBAction func gotoLogin(sender: UIButton) {
