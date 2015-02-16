@@ -13,6 +13,8 @@
 		F8BE0E831A91FD39001E4964 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8BE0E821A91FD39001E4964 /* Images.xcassets */; };
 		F8BE0E861A91FD39001E4964 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8BE0E841A91FD39001E4964 /* LaunchScreen.xib */; };
 		F8BE0E921A91FD39001E4964 /* DiveLoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BE0E911A91FD39001E4964 /* DiveLoggerTests.swift */; };
+		F8BE0E9C1A92008B001E4964 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BE0E9B1A92008B001E4964 /* LoginViewController.swift */; };
+		F8BE0E9E1A920123001E4964 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BE0E9D1A920123001E4964 /* SignupViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		F8BE0E8B1A91FD39001E4964 /* DiveLoggerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DiveLoggerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8BE0E901A91FD39001E4964 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8BE0E911A91FD39001E4964 /* DiveLoggerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiveLoggerTests.swift; sourceTree = "<group>"; };
+		F8BE0E9B1A92008B001E4964 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		F8BE0E9D1A920123001E4964 /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,8 @@
 				F8BE0E821A91FD39001E4964 /* Images.xcassets */,
 				F8BE0E841A91FD39001E4964 /* LaunchScreen.xib */,
 				F8BE0E791A91FD39001E4964 /* Supporting Files */,
+				F8BE0E9B1A92008B001E4964 /* LoginViewController.swift */,
+				F8BE0E9D1A920123001E4964 /* SignupViewController.swift */,
 			);
 			path = DiveLogger;
 			sourceTree = "<group>";
@@ -161,6 +167,7 @@
 				TargetAttributes = {
 					F8BE0E751A91FD39001E4964 = {
 						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = EK6MK2436T;
 					};
 					F8BE0E8A1A91FD39001E4964 = {
 						CreatedOnToolsVersion = 6.1;
@@ -212,7 +219,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8BE0E9C1A92008B001E4964 /* LoginViewController.swift in Sources */,
 				F8BE0E7E1A91FD39001E4964 /* ViewController.swift in Sources */,
+				F8BE0E9E1A920123001E4964 /* SignupViewController.swift in Sources */,
 				F8BE0E7C1A91FD39001E4964 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -336,6 +345,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = DiveLogger/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -346,6 +356,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = DiveLogger/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
