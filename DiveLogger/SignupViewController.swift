@@ -10,7 +10,7 @@ import UIKit
 //TODO: Move Alamofire to a restServiceHandler
 import Alamofire
 
-class SignupViewController: UIViewController {
+class SignupViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var txtEmail: UITextField!
     @IBOutlet weak var txtPassword: UITextField!
@@ -20,6 +20,8 @@ class SignupViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        txtEmail.delegate = self
+        txtPassword.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -43,7 +45,7 @@ class SignupViewController: UIViewController {
             ]
             var dataRes:NSDictionary!
             
-            Alamofire.request(.POST, "http://192.168.1.19:3000/api/v1/registrations", parameters: params, encoding: .JSON)
+            Alamofire.request(.POST, "http://underwater-me.herokuapp.com/api/v1/registrations", parameters: params, encoding: .JSON)
                 .responseJSON() {
                 (request, response, data, error) in
                     let statusCode = response?.statusCode
@@ -67,6 +69,11 @@ class SignupViewController: UIViewController {
 
     @IBAction func gotoLogin(sender: UIButton) {
         self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func textFieldShouldReturn(textField: UITextField!) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
     /*
     // MARK: - Navigation

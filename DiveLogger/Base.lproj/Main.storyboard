@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="UxU-La-nb8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="UxU-La-nb8">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -117,15 +117,21 @@
                                     <segue destination="Okr-aM-acQ" kind="presentation" id="jia-Zl-FV5"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kxx-x4-Oa2">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="pfM-nA-bXn">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="16" y="154" width="368" height="30"/>
+                                </variation>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pfM-nA-bXn">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Kxx-x4-Oa2">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="16" y="225" width="368" height="30"/>
+                                </variation>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -145,8 +151,8 @@
                             <mask key="subviews">
                                 <exclude reference="Kt1-UN-6Cz"/>
                                 <exclude reference="Vap-vc-mEd"/>
-                                <exclude reference="Kxx-x4-Oa2"/>
                                 <exclude reference="pfM-nA-bXn"/>
+                                <exclude reference="Kxx-x4-Oa2"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="5GF-zs-Lbj"/>
@@ -165,8 +171,8 @@
                             <mask key="subviews">
                                 <include reference="Kt1-UN-6Cz"/>
                                 <include reference="Vap-vc-mEd"/>
-                                <include reference="Kxx-x4-Oa2"/>
                                 <include reference="pfM-nA-bXn"/>
+                                <include reference="Kxx-x4-Oa2"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="5GF-zs-Lbj"/>
@@ -211,8 +217,14 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="NLX-8N-Gfv">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="done"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please fill in both fields" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Sd-VO-B4b">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sLE-Wc-vbc">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" title="Already Registered? Login now">
@@ -223,12 +235,6 @@
                                     <segue destination="0V4-sU-jVn" kind="presentation" id="me4-2M-IQE"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please fill in both fields" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Sd-VO-B4b">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ASh-D3-WCh">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" title="Register">
@@ -253,14 +259,14 @@
                             </constraint>
                             <constraint firstItem="jP7-3V-rDR" firstAttribute="leading" secondItem="NLX-8N-Gfv" secondAttribute="leading" id="WqM-Zr-11r"/>
                             <constraint firstItem="ASh-D3-WCh" firstAttribute="top" secondItem="NLX-8N-Gfv" secondAttribute="bottom" constant="63" id="XVd-pY-alI">
-                                <variation key="widthClass=compact" constant="8"/>
+                                <variation key="widthClass=compact" constant="100"/>
                             </constraint>
                             <constraint firstItem="3Sd-VO-B4b" firstAttribute="trailing" secondItem="xch-rj-L6V" secondAttribute="trailingMargin" id="Z3M-VK-YTx"/>
                             <constraint firstItem="sLE-Wc-vbc" firstAttribute="centerX" secondItem="ASh-D3-WCh" secondAttribute="centerX" id="gcB-Je-98X"/>
                             <constraint firstItem="ASh-D3-WCh" firstAttribute="centerX" secondItem="NLX-8N-Gfv" secondAttribute="centerX" id="kAg-51-XJE"/>
                             <constraint firstItem="3Sd-VO-B4b" firstAttribute="top" secondItem="Xbq-b8-fWa" secondAttribute="bottom" constant="92" id="r1a-kJ-Rzf"/>
                             <constraint firstItem="sLE-Wc-vbc" firstAttribute="top" secondItem="ASh-D3-WCh" secondAttribute="bottom" constant="8" symbolic="YES" id="xeB-uy-AGd">
-                                <variation key="widthClass=compact" constant="63"/>
+                                <variation key="widthClass=compact" constant="1"/>
                             </constraint>
                             <constraint firstItem="NLX-8N-Gfv" firstAttribute="leading" secondItem="xch-rj-L6V" secondAttribute="leadingMargin" id="yAc-AW-UdF"/>
                         </constraints>
@@ -268,8 +274,8 @@
                             <mask key="subviews">
                                 <exclude reference="jP7-3V-rDR"/>
                                 <exclude reference="NLX-8N-Gfv"/>
-                                <exclude reference="sLE-Wc-vbc"/>
                                 <exclude reference="3Sd-VO-B4b"/>
+                                <exclude reference="sLE-Wc-vbc"/>
                                 <exclude reference="ASh-D3-WCh"/>
                             </mask>
                             <mask key="constraints">
@@ -293,8 +299,8 @@
                             <mask key="subviews">
                                 <include reference="jP7-3V-rDR"/>
                                 <include reference="NLX-8N-Gfv"/>
-                                <include reference="sLE-Wc-vbc"/>
                                 <include reference="3Sd-VO-B4b"/>
+                                <include reference="sLE-Wc-vbc"/>
                                 <include reference="ASh-D3-WCh"/>
                             </mask>
                             <mask key="constraints">

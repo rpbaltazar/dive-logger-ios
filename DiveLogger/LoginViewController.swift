@@ -9,15 +9,16 @@
 import UIKit
 import Alamofire
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var txtEmail: UITextField!
     @IBOutlet weak var txtPassword: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        txtEmail.delegate = self
+        txtPassword.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,16 +29,16 @@ class LoginViewController: UIViewController {
 
     @IBAction func login(sender: UIButton) {
         let params = [
-            "email": txtEmail,
-            "password": txtPassword,
+            "email": txtEmail.text,
+            "password": txtPassword.text,
         ]
         
         var dataRes:NSDictionary!
         
-        Alamofire.request(.POST, "http://192.168.1.19:3000/api/v1/sessions", parameters: params, encoding: .JSON)
+        Alamofire.request(.POST, "http://underwater-me.herokuapp.com/api/v1/sessions", parameters: params, encoding: .JSON)
             .responseJSON() {
                 (request, response, data, error) in
-                let statusCode = response?.statusCode
+                var statusCode = response?.statusCode
                 
                 dataRes = data as NSDictionary
                 if (statusCode >= 200 && statusCode < 300){
@@ -55,6 +56,11 @@ class LoginViewController: UIViewController {
                     alertView.show()
                 }
         }
+    }
+    
+    func textFieldShouldReturn(textField: UITextField!) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
     
     /*
