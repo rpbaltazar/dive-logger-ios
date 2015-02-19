@@ -62,6 +62,20 @@ class SignupViewController: UIViewController, UITextFieldDelegate {
                         var passwordErrors:NSArray = errorsList["password"] as NSArray
                         println(emailErrors)
                         println(passwordErrors)
+                        var alertView:UIAlertView = UIAlertView()
+                        alertView.title = "Registration Failed!"
+                        var message:NSString = "";
+                        if (emailErrors.count > 0) {
+                            message = "Problems with email"
+                        }
+                        if (passwordErrors.count > 0) {
+                            message = message + "\n Problems with password"
+                        }
+                        alertView.message = message
+                        alertView.delegate = self
+                        alertView.addButtonWithTitle("OK")
+                        alertView.show()
+
                     }
                 }
         }

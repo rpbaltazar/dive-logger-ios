@@ -26,12 +26,15 @@ class ViewController: UIViewController {
         super.viewDidAppear(animated)
         let prefs:NSUserDefaults = NSUserDefaults.standardUserDefaults()
         //TODO: Move this to a constants manager
-        let isLoggedIn:Int = prefs.integerForKey("ISLOGGEDIN") as Int
-        if (isLoggedIn != 1) {
+        var authToken:NSString = ""
+        if(prefs.valueForKey("DIVELOGGER_AUTHKEY") != nil) {
+            authToken = prefs.valueForKey("DIVELOGGER_AUTHKEY") as NSString
+        }
+        if (authToken == "") {
             self.performSegueWithIdentifier("goto_login", sender: self)
         }
         else {
-            self.lblUsername.text = prefs.valueForKey("USERNAME") as NSString
+            self.lblUsername.text = prefs.valueForKey("DIVELOGGER_EMAIL") as NSString
         }
     }
 
