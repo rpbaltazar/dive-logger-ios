@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "F8BE0E751A91FD39001E4964"
-               BuildableName = "DiveLogger.app"
-               BlueprintName = "DiveLogger"
-               ReferencedContainer = "container:DiveLogger.xcodeproj">
+               BuildableName = "Underwater Me.app"
+               BlueprintName = "Underwater Me"
+               ReferencedContainer = "container:Underwater Me.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "F8BE0E8A1A91FD39001E4964"
-               BuildableName = "DiveLoggerTests.xctest"
-               BlueprintName = "DiveLoggerTests"
-               ReferencedContainer = "container:DiveLogger.xcodeproj">
+               BuildableName = "Underwater MeTests.xctest"
+               BlueprintName = "Underwater MeTests"
+               ReferencedContainer = "container:Underwater Me.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -47,9 +47,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "F8BE0E8A1A91FD39001E4964"
-               BuildableName = "DiveLoggerTests.xctest"
-               BlueprintName = "DiveLoggerTests"
-               ReferencedContainer = "container:DiveLogger.xcodeproj">
+               BuildableName = "Underwater MeTests.xctest"
+               BlueprintName = "Underwater MeTests"
+               ReferencedContainer = "container:Underwater Me.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -57,9 +57,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F8BE0E751A91FD39001E4964"
-            BuildableName = "DiveLogger.app"
-            BlueprintName = "DiveLogger"
-            ReferencedContainer = "container:DiveLogger.xcodeproj">
+            BuildableName = "Underwater Me.app"
+            BlueprintName = "Underwater Me"
+            ReferencedContainer = "container:Underwater Me.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F8BE0E751A91FD39001E4964"
-            BuildableName = "DiveLogger.app"
-            BlueprintName = "DiveLogger"
-            ReferencedContainer = "container:DiveLogger.xcodeproj">
+            BuildableName = "Underwater Me.app"
+            BlueprintName = "Underwater Me"
+            ReferencedContainer = "container:Underwater Me.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -94,9 +94,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F8BE0E751A91FD39001E4964"
-            BuildableName = "DiveLogger.app"
-            BlueprintName = "DiveLogger"
-            ReferencedContainer = "container:DiveLogger.xcodeproj">
+            BuildableName = "Underwater Me.app"
+            BlueprintName = "Underwater Me"
+            ReferencedContainer = "container:Underwater Me.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

@@ -9,8 +9,9 @@
 /* Begin PBXBuildFile section */
 		6686D45825B4275C5F1B6DEA /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4D18305EA2C85CD93923CFC /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		F8B7C13E1A971FDC007E0CCF /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B7C13D1A971FDC007E0CCF /* ApiManager.swift */; };
+		F8B7C1421A973904007E0CCF /* DivesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B7C1411A973904007E0CCF /* DivesViewController.swift */; };
+		F8B7C1481A973F80007E0CCF /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B7C1471A973F80007E0CCF /* ProfileViewController.swift */; };
 		F8BE0E7C1A91FD39001E4964 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BE0E7B1A91FD39001E4964 /* AppDelegate.swift */; };
-		F8BE0E7E1A91FD39001E4964 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BE0E7D1A91FD39001E4964 /* ViewController.swift */; };
 		F8BE0E811A91FD39001E4964 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8BE0E7F1A91FD39001E4964 /* Main.storyboard */; };
 		F8BE0E831A91FD39001E4964 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8BE0E821A91FD39001E4964 /* Images.xcassets */; };
 		F8BE0E861A91FD39001E4964 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8BE0E841A91FD39001E4964 /* LaunchScreen.xib */; };
@@ -34,14 +35,15 @@
 		50FA0986FE12B08D437453AD /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		A4D18305EA2C85CD93923CFC /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8B7C13D1A971FDC007E0CCF /* ApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
-		F8BE0E761A91FD39001E4964 /* DiveLogger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiveLogger.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8B7C1411A973904007E0CCF /* DivesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DivesViewController.swift; sourceTree = "<group>"; };
+		F8B7C1471A973F80007E0CCF /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		F8BE0E761A91FD39001E4964 /* Underwater Me.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Underwater Me.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8BE0E7A1A91FD39001E4964 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8BE0E7B1A91FD39001E4964 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F8BE0E7D1A91FD39001E4964 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F8BE0E801A91FD39001E4964 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F8BE0E821A91FD39001E4964 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F8BE0E851A91FD39001E4964 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		F8BE0E8B1A91FD39001E4964 /* DiveLoggerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DiveLoggerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8BE0E8B1A91FD39001E4964 /* Underwater MeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Underwater MeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8BE0E901A91FD39001E4964 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8BE0E911A91FD39001E4964 /* DiveLoggerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiveLoggerTests.swift; sourceTree = "<group>"; };
 		F8BE0E9B1A92008B001E4964 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -106,8 +108,8 @@
 		F8BE0E771A91FD39001E4964 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F8BE0E761A91FD39001E4964 /* DiveLogger.app */,
-				F8BE0E8B1A91FD39001E4964 /* DiveLoggerTests.xctest */,
+				F8BE0E761A91FD39001E4964 /* Underwater Me.app */,
+				F8BE0E8B1A91FD39001E4964 /* Underwater MeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -117,8 +119,9 @@
 			children = (
 				F8B7C13C1A971FC7007E0CCF /* Utilities */,
 				F8BE0E7B1A91FD39001E4964 /* AppDelegate.swift */,
-				F8BE0E7D1A91FD39001E4964 /* ViewController.swift */,
 				F8BE0E7F1A91FD39001E4964 /* Main.storyboard */,
+				F8B7C1471A973F80007E0CCF /* ProfileViewController.swift */,
+				F8B7C1411A973904007E0CCF /* DivesViewController.swift */,
 				F8BE0E821A91FD39001E4964 /* Images.xcassets */,
 				F8BE0E841A91FD39001E4964 /* LaunchScreen.xib */,
 				F8BE0E791A91FD39001E4964 /* Supporting Files */,
@@ -156,9 +159,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F8BE0E751A91FD39001E4964 /* DiveLogger */ = {
+		F8BE0E751A91FD39001E4964 /* Underwater Me */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F8BE0E951A91FD39001E4964 /* Build configuration list for PBXNativeTarget "DiveLogger" */;
+			buildConfigurationList = F8BE0E951A91FD39001E4964 /* Build configuration list for PBXNativeTarget "Underwater Me" */;
 			buildPhases = (
 				A3E5684372813E98AA96A98C /* Check Pods Manifest.lock */,
 				F8BE0E721A91FD39001E4964 /* Sources */,
@@ -171,14 +174,14 @@
 			);
 			dependencies = (
 			);
-			name = DiveLogger;
+			name = "Underwater Me";
 			productName = DiveLogger;
-			productReference = F8BE0E761A91FD39001E4964 /* DiveLogger.app */;
+			productReference = F8BE0E761A91FD39001E4964 /* Underwater Me.app */;
 			productType = "com.apple.product-type.application";
 		};
-		F8BE0E8A1A91FD39001E4964 /* DiveLoggerTests */ = {
+		F8BE0E8A1A91FD39001E4964 /* Underwater MeTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F8BE0E981A91FD39001E4964 /* Build configuration list for PBXNativeTarget "DiveLoggerTests" */;
+			buildConfigurationList = F8BE0E981A91FD39001E4964 /* Build configuration list for PBXNativeTarget "Underwater MeTests" */;
 			buildPhases = (
 				F8BE0E871A91FD39001E4964 /* Sources */,
 				F8BE0E881A91FD39001E4964 /* Frameworks */,
@@ -189,9 +192,9 @@
 			dependencies = (
 				F8BE0E8D1A91FD39001E4964 /* PBXTargetDependency */,
 			);
-			name = DiveLoggerTests;
+			name = "Underwater MeTests";
 			productName = DiveLoggerTests;
-			productReference = F8BE0E8B1A91FD39001E4964 /* DiveLoggerTests.xctest */;
+			productReference = F8BE0E8B1A91FD39001E4964 /* Underwater MeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -213,7 +216,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F8BE0E711A91FD39001E4964 /* Build configuration list for PBXProject "DiveLogger" */;
+			buildConfigurationList = F8BE0E711A91FD39001E4964 /* Build configuration list for PBXProject "Underwater Me" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -226,8 +229,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F8BE0E751A91FD39001E4964 /* DiveLogger */,
-				F8BE0E8A1A91FD39001E4964 /* DiveLoggerTests */,
+				F8BE0E751A91FD39001E4964 /* Underwater Me */,
+				F8BE0E8A1A91FD39001E4964 /* Underwater MeTests */,
 			);
 		};
 /* End PBXProject section */
@@ -305,10 +308,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8B7C1481A973F80007E0CCF /* ProfileViewController.swift in Sources */,
 				F8BE0E9C1A92008B001E4964 /* LoginViewController.swift in Sources */,
-				F8BE0E7E1A91FD39001E4964 /* ViewController.swift in Sources */,
 				F8B7C13E1A971FDC007E0CCF /* ApiManager.swift in Sources */,
 				F8BE0E9E1A920123001E4964 /* SignupViewController.swift in Sources */,
+				F8B7C1421A973904007E0CCF /* DivesViewController.swift in Sources */,
 				F8BE0E7C1A91FD39001E4964 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -326,7 +330,7 @@
 /* Begin PBXTargetDependency section */
 		F8BE0E8D1A91FD39001E4964 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F8BE0E751A91FD39001E4964 /* DiveLogger */;
+			target = F8BE0E751A91FD39001E4964 /* Underwater Me */;
 			targetProxy = F8BE0E8C1A91FD39001E4964 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -436,7 +440,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = DiveLogger/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Underwater Me";
 			};
 			name = Debug;
 		};
@@ -448,7 +452,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = DiveLogger/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Underwater Me";
 			};
 			name = Release;
 		};
@@ -466,7 +470,7 @@
 				);
 				INFOPLIST_FILE = DiveLoggerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Underwater MeTests";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DiveLogger.app/DiveLogger";
 			};
 			name = Debug;
@@ -481,7 +485,7 @@
 				);
 				INFOPLIST_FILE = DiveLoggerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Underwater MeTests";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DiveLogger.app/DiveLogger";
 			};
 			name = Release;
@@ -489,7 +493,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F8BE0E711A91FD39001E4964 /* Build configuration list for PBXProject "DiveLogger" */ = {
+		F8BE0E711A91FD39001E4964 /* Build configuration list for PBXProject "Underwater Me" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F8BE0E931A91FD39001E4964 /* Debug */,
@@ -498,7 +502,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F8BE0E951A91FD39001E4964 /* Build configuration list for PBXNativeTarget "DiveLogger" */ = {
+		F8BE0E951A91FD39001E4964 /* Build configuration list for PBXNativeTarget "Underwater Me" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F8BE0E961A91FD39001E4964 /* Debug */,
@@ -507,7 +511,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F8BE0E981A91FD39001E4964 /* Build configuration list for PBXNativeTarget "DiveLoggerTests" */ = {
+		F8BE0E981A91FD39001E4964 /* Build configuration list for PBXNativeTarget "Underwater MeTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F8BE0E991A91FD39001E4964 /* Debug */,

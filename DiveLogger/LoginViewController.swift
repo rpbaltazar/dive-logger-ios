@@ -14,11 +14,21 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var txtEmail: UITextField!
     @IBOutlet weak var txtPassword: UITextField!
     
+    var authToken = ""
+    var email = ""
+    var prefs:NSUserDefaults!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         txtEmail.delegate = self
         txtPassword.delegate = self
+        prefs = NSUserDefaults.standardUserDefaults()
+/*
+        if(prefs.valueForKey("DIVELOGGER_AUTHKEY") != nil) {
+            self.performSegueWithIdentifier("main_app", sender: self)
+        }
+*/
     }
 
     override func didReceiveMemoryWarning() {
@@ -54,6 +64,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                     alertView.show()
                 }
         }
+
     }
     
     func textFieldShouldReturn(textField: UITextField!) -> Bool {
