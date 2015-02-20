@@ -26,24 +26,22 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-
     @IBAction func login(sender: UIButton) {
         let params = [
             "email": txtEmail.text,
             "password": txtPassword.text,
         ]
-        
-        var dataRes:NSDictionary!
-        
+        //TODO: This should be done in a Api Manager
         Alamofire.request(.POST, "http://underwater-me.herokuapp.com/api/v1/sessions", parameters: params, encoding: .JSON)
             .responseJSON() {
                 (request, response, data, error) in
+                let dataRes = data as NSDictionary
                 var statusCode = response?.statusCode
-                
-                dataRes = data as NSDictionary
-                if (statusCode >= 200 && statusCode < 300){
-                    //login successfully
-                    //store logged in
+                if (statusCode >= 200 && statusCode < 300) {
+                    let prefs:NSUserDefaults = NSUserDefaults.standardUserDefaults()
+                    prefs.setObject(dataRes["authentication_token"], forKey: "DIVELOGGER_AUTHKEY")
+                    prefs.setObject(dataRes["email"], forKey: "DIVELOGGER_EMAIL")
+                    prefs.synchronize()
                     self.dismissViewControllerAnimated(true, completion: nil)
                 }
                 else {

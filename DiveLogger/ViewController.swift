@@ -12,9 +12,14 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var lblUsername: UILabel!
     
+    var authToken = ""
+    var email = ""
+    var prefs:NSUserDefaults!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        prefs = NSUserDefaults.standardUserDefaults()
     }
 
     override func didReceiveMemoryWarning() {
@@ -24,22 +29,32 @@ class ViewController: UIViewController {
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        let prefs:NSUserDefaults = NSUserDefaults.standardUserDefaults()
         //TODO: Move this to a constants manager
-        var authToken:NSString = ""
         if(prefs.valueForKey("DIVELOGGER_AUTHKEY") != nil) {
             authToken = prefs.valueForKey("DIVELOGGER_AUTHKEY") as NSString
+            email = prefs.valueForKey("DIVELOGGER_EMAIL") as NSString
         }
         if (authToken == "") {
             self.performSegueWithIdentifier("goto_login", sender: self)
         }
         else {
-            self.lblUsername.text = prefs.valueForKey("DIVELOGGER_EMAIL") as NSString
+            self.lblUsername.text = email
         }
     }
+    
+    func logoutCallback(response: NSHTTPURLResponse, dataRes: NSDictionary) {
+        let appDomain = NSBundle.mainBundle().bundleIdentifier
+        NSUserDefaults.standardUserDefaults().removePersistentDomainForName(appDomain!)
+        self.performSegueWithIdentifier("goto_login", sender: self)
+    }
+
 
     @IBAction func logout(sender: UIButton) {
-        self.performSegueWithIdentifier("goto_login", sender: self)
+        let params = [
+            "user_email": email,
+            "user_token": authToken
+        ]
+        ApiManager.logout(params, callback: logoutCallback)
     }
 
 }
