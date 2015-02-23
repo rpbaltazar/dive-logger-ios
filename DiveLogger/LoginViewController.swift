@@ -80,6 +80,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         self.loginActivityIndicator.stopAnimating()
     }
 
+    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+        self.view.endEditing(true)
+    }
     func textFieldShouldReturn(textField: UITextField!) -> Bool {
         textField.resignFirstResponder()
         return true
