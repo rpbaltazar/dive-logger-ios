@@ -25,11 +25,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         txtEmail.delegate = self
         txtPassword.delegate = self
         prefs = NSUserDefaults.standardUserDefaults()
-/*
-        if(prefs.valueForKey("DIVELOGGER_AUTHKEY") != nil) {
-            self.performSegueWithIdentifier("main_app", sender: self)
-        }
-*/
     }
 
     override func didReceiveMemoryWarning() {

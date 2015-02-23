@@ -19,7 +19,11 @@ class DiveLogBook: NSObject {
     var diveLogs = [diveLog]()
     
     func addDive(date: NSString, location: NSString) {
-        diveLogs.append(diveLog(date: date, location: location ))
+        let dive:diveLog = diveLog(date:date, location:location)
+        NSLog(date)
+        NSLog(location)
+        
+        diveLogs.append(dive)
     }
     
 }
