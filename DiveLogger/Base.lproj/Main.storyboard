@@ -9,7 +9,7 @@
         <!--Login View Controller-->
         <scene sceneID="KFV-o0-IaH">
             <objects>
-                <viewController id="0V4-sU-jVn" customClass="LoginViewController" customModule="DiveLogger" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="0V4-sU-jVn" customClass="LoginViewController" customModule="Underwater_Me" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ae6-OJ-VAM"/>
                         <viewControllerLayoutGuide type="bottom" id="fdy-qq-Fje"/>
@@ -121,12 +121,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wY8-AA-fw3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2386.5" y="-612"/>
+            <point key="canvasLocation" x="2338.5" y="-612"/>
         </scene>
         <!--Profile-->
         <scene sceneID="3ax-0D-QjF">
             <objects>
-                <viewController id="PP0-yH-8ac" customClass="ProfileViewController" customModule="DiveLogger" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="PP0-yH-8ac" customClass="ProfileViewController" customModule="Underwater_Me" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="AYc-AJ-HWy"/>
                         <viewControllerLayoutGuide type="bottom" id="cho-bk-Hxq"/>
@@ -143,7 +143,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yfF-Mw-Ucv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1267.5" y="-219"/>
+            <point key="canvasLocation" x="1267.5" y="556"/>
         </scene>
         <!--New Dive-->
         <scene sceneID="fy2-zb-ZOd">
@@ -158,16 +158,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Log Dive" image="AddIcon" id="fL5-8w-lYC"/>
+                    <tabBarItem key="tabBarItem" title="Log Dive" image="AddDive" id="fL5-8w-lYC"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H0u-w3-xTy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1264.5" y="481"/>
+            <point key="canvasLocation" x="1267.5" y="-511"/>
         </scene>
         <!--Dives-->
         <scene sceneID="rXz-e5-V6j">
             <objects>
-                <viewController id="T7T-3s-t9o" customClass="DivesViewController" customModule="DiveLogger" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="T7T-3s-t9o" customClass="DivesViewController" customModule="Underwater_Me" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="U46-TD-Pdi"/>
                         <viewControllerLayoutGuide type="bottom" id="7m2-64-Ieg"/>
@@ -184,7 +184,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b0H-su-4mh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1267.5" y="-934"/>
+            <point key="canvasLocation" x="1267.5" y="-1361"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="HpZ-ya-2G5">
@@ -212,7 +212,7 @@
         <!--Signup View Controller-->
         <scene sceneID="lRk-n0-7jF">
             <objects>
-                <viewController id="Okr-aM-acQ" customClass="SignupViewController" customModule="DiveLogger" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Okr-aM-acQ" customClass="SignupViewController" customModule="Underwater_Me" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Xbq-b8-fWa"/>
                         <viewControllerLayoutGuide type="bottom" id="oBK-ED-7Ct"/>
@@ -341,7 +341,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8LM-ZB-7Ui" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3157.5" y="-1361"/>
+            <point key="canvasLocation" x="3109.5" y="-1361"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ZF9-UY-85e">
@@ -363,7 +363,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="AddIcon" width="32" height="32"/>
+        <image name="AddDive" width="32" height="32"/>
         <image name="DiveMask" width="43" height="30"/>
         <image name="Profile" width="32" height="32"/>
     </resources>
