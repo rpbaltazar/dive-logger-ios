@@ -122,11 +122,11 @@
 				F8BE0E7F1A91FD39001E4964 /* Main.storyboard */,
 				F8B7C1471A973F80007E0CCF /* ProfileViewController.swift */,
 				F8B7C1411A973904007E0CCF /* DivesViewController.swift */,
+				F8BE0E9B1A92008B001E4964 /* LoginViewController.swift */,
+				F8BE0E9D1A920123001E4964 /* SignupViewController.swift */,
 				F8BE0E821A91FD39001E4964 /* Images.xcassets */,
 				F8BE0E841A91FD39001E4964 /* LaunchScreen.xib */,
 				F8BE0E791A91FD39001E4964 /* Supporting Files */,
-				F8BE0E9B1A92008B001E4964 /* LoginViewController.swift */,
-				F8BE0E9D1A920123001E4964 /* SignupViewController.swift */,
 			);
 			path = DiveLogger;
 			sourceTree = "<group>";
