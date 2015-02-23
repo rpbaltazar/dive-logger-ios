@@ -13,6 +13,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var txtEmail: UITextField!
     @IBOutlet weak var txtPassword: UITextField!
+    @IBOutlet weak var loginActivityIndicator: UIActivityIndicatorView!
     
     var authToken = ""
     var email = ""
@@ -37,6 +38,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func login(sender: UIButton) {
+        showSpinner()
         let params = [
             "email": txtEmail.text,
             "password": txtPassword.text,
@@ -52,9 +54,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                     prefs.setObject(dataRes["authentication_token"], forKey: "DIVELOGGER_AUTHKEY")
                     prefs.setObject(dataRes["email"], forKey: "DIVELOGGER_EMAIL")
                     prefs.synchronize()
+                    self.hideSpinner()
                     self.dismissViewControllerAnimated(true, completion: nil)
                 }
                 else {
+                    self.hideSpinner()
                     //login error
                     var alertView:UIAlertView = UIAlertView()
                     alertView.title = "Sign in Failed!"
@@ -63,15 +67,23 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                     alertView.addButtonWithTitle("OK")
                     alertView.show()
                 }
+                
         }
 
     }
     
+    private func showSpinner() {
+        self.loginActivityIndicator.startAnimating()
+    }
+
+    private func hideSpinner() {
+        self.loginActivityIndicator.stopAnimating()
+    }
+
     func textFieldShouldReturn(textField: UITextField!) -> Bool {
         textField.resignFirstResponder()
         return true
     }
-    
     /*
     // MARK: - Navigation
 
@@ -81,5 +93,4 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         // Pass the selected object to the new view controller.
     }
     */
-
 }
