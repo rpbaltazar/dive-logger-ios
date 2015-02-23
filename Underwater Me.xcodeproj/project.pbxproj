@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6686D45825B4275C5F1B6DEA /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4D18305EA2C85CD93923CFC /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		F87A31C61A9B65CB007EE505 /* DiveLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87A31C51A9B65CB007EE505 /* DiveLog.swift */; };
 		F8B7C13E1A971FDC007E0CCF /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B7C13D1A971FDC007E0CCF /* ApiManager.swift */; };
 		F8B7C1421A973904007E0CCF /* DivesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B7C1411A973904007E0CCF /* DivesViewController.swift */; };
 		F8B7C1481A973F80007E0CCF /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B7C1471A973F80007E0CCF /* ProfileViewController.swift */; };
@@ -34,6 +35,7 @@
 		4EF8F585918A26A8B5FD2AF8 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		50FA0986FE12B08D437453AD /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		A4D18305EA2C85CD93923CFC /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F87A31C51A9B65CB007EE505 /* DiveLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DiveLog.swift; path = ../DiveLog.swift; sourceTree = "<group>"; };
 		F8B7C13D1A971FDC007E0CCF /* ApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		F8B7C1411A973904007E0CCF /* DivesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DivesViewController.swift; sourceTree = "<group>"; };
 		F8B7C1471A973F80007E0CCF /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -86,6 +88,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		F8AE8A4A1A9C4CC600ACC784 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F87A31C51A9B65CB007EE505 /* DiveLog.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		F8B7C13C1A971FC7007E0CCF /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
@@ -117,16 +127,17 @@
 		F8BE0E781A91FD39001E4964 /* DiveLogger */ = {
 			isa = PBXGroup;
 			children = (
+				F8AE8A4A1A9C4CC600ACC784 /* Models */,
 				F8B7C13C1A971FC7007E0CCF /* Utilities */,
 				F8BE0E7B1A91FD39001E4964 /* AppDelegate.swift */,
 				F8BE0E7F1A91FD39001E4964 /* Main.storyboard */,
 				F8B7C1471A973F80007E0CCF /* ProfileViewController.swift */,
 				F8B7C1411A973904007E0CCF /* DivesViewController.swift */,
+				F8BE0E9B1A92008B001E4964 /* LoginViewController.swift */,
+				F8BE0E9D1A920123001E4964 /* SignupViewController.swift */,
 				F8BE0E821A91FD39001E4964 /* Images.xcassets */,
 				F8BE0E841A91FD39001E4964 /* LaunchScreen.xib */,
 				F8BE0E791A91FD39001E4964 /* Supporting Files */,
-				F8BE0E9B1A92008B001E4964 /* LoginViewController.swift */,
-				F8BE0E9D1A920123001E4964 /* SignupViewController.swift */,
 			);
 			path = DiveLogger;
 			sourceTree = "<group>";
@@ -312,6 +323,7 @@
 				F8BE0E9C1A92008B001E4964 /* LoginViewController.swift in Sources */,
 				F8B7C13E1A971FDC007E0CCF /* ApiManager.swift in Sources */,
 				F8BE0E9E1A920123001E4964 /* SignupViewController.swift in Sources */,
+				F87A31C61A9B65CB007EE505 /* DiveLog.swift in Sources */,
 				F8B7C1421A973904007E0CCF /* DivesViewController.swift in Sources */,
 				F8BE0E7C1A91FD39001E4964 /* AppDelegate.swift in Sources */,
 			);

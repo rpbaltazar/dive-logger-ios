@@ -7,12 +7,13 @@
 //
 
 
+//NOTE: Not being used yet
 //TODO: Read more about this
 import Foundation
 import Alamofire
 
 class ApiManager {
-    
+    /*
     class func login(params:[String:AnyObject], callback: (NSHTTPURLResponse, NSDictionary) -> Void){
         Alamofire.request(.POST, "http://underwater-me.herokuapp.com/api/v1/sessions", parameters: params, encoding: .JSON)
             .responseJSON() {
@@ -30,4 +31,5 @@ class ApiManager {
                 callback(response!, dataRes)
         }
     }
+*/
 }
