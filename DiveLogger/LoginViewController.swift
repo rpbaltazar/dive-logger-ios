@@ -17,14 +17,18 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     var authToken = ""
     var email = ""
-    var prefs:NSUserDefaults!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         txtEmail.delegate = self
         txtPassword.delegate = self
-        prefs = NSUserDefaults.standardUserDefaults()
+        
+        self.setNeedsStatusBarAppearanceUpdate()
+    }
+    
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return UIStatusBarStyle.LightContent
     }
 
     override func didReceiveMemoryWarning() {

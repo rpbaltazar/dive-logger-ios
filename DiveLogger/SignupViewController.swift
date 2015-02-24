@@ -22,6 +22,11 @@ class SignupViewController: UIViewController, UITextFieldDelegate {
         // Do any additional setup after loading the view.
         txtEmail.delegate = self
         txtPassword.delegate = self
+        self.setNeedsStatusBarAppearanceUpdate()
+    }
+    
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return UIStatusBarStyle.LightContent
     }
 
     override func didReceiveMemoryWarning() {
