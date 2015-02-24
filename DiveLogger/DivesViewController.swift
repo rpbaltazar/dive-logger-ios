@@ -27,8 +27,6 @@ class DivesViewController: UIViewController, UITableViewDataSource, UITableViewD
         // Do any additional setup after loading the view.
         if(!sessionManager.isUserLoggedIn()){
             self.performSegueWithIdentifier("dives_to_login", sender: self)
-        } else {
-            //TODO: check authkey validity
         }
     }
 
@@ -68,27 +66,29 @@ class DivesViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     private func fetchDives() {
-        //showSpinner()
-        let params = sessionManager.getAuthParams()
-        //TODO: This should be done in a Api Manager
-        Alamofire.request(.GET, "http://underwater-me.herokuapp.com/api/v1/dives", parameters: params)
-            .responseJSON() {
-                (request, response, data, error) in
-                var statusCode = response?.statusCode
-                if (statusCode >= 200 && statusCode < 300) {
-                    let dataRes = data as NSArray
-                    for diveJSON in dataRes {
-                        let diveDate:NSString = diveJSON["dive_date"] as NSString
-                        let diveLocation:NSString = diveJSON["location_name"] as NSString
-                        diveLogBook.addDive(diveDate, location: diveLocation)
+        var now = NSDate()
+        if(now.timeIntervalSinceDate(diveLogBook.lastUpdate) > 3600){
+            //showSpinner()
+            let params = sessionManager.getAuthParams()
+            //TODO: This should be done in a Api Manager
+            Alamofire.request(.GET, "http://underwater-me.herokuapp.com/api/v1/dives", parameters: params)
+                .responseJSON() {
+                    (request, response, data, error) in
+                    var statusCode = response?.statusCode
+                    if (statusCode >= 200 && statusCode < 300) {
+                        let dataRes = data as NSArray
+                        for diveJSON in dataRes {
+                            let diveDate:NSString = diveJSON["dive_date"] as NSString
+                            let diveLocation:NSString = diveJSON["location_name"] as NSString
+                            diveLogBook.addDive(diveDate, location: diveLocation)
+                        }
+                        self.divesListView?.reloadData()
                     }
-                    self.divesListView?.reloadData()
-                }
-                else {
-                    //self.hideSpinner()
-                    //login error
-                    NSLog("Bode")
-                }
+                    else {
+                        //self.hideSpinner()
+                        NSLog("Bode")
+                    }
+            }
         }
     }
 }

@@ -17,13 +17,18 @@ struct diveLog {
 
 class DiveLogBook: NSObject {
     var diveLogs = [diveLog]()
+    var lastUpdate:NSDate
+    
+    override init() {
+        self.lastUpdate = NSDate(timeIntervalSince1970: 0)
+    }
     
     func addDive(date: NSString, location: NSString) {
         let dive:diveLog = diveLog(date:date, location:location)
-        NSLog(date)
-        NSLog(location)
-        
         diveLogs.append(dive)
+        lastUpdate = NSDate()
+
+        NSLog("LAST UPDATED @ %@", NSDateFormatter.localizedStringFromDate(lastUpdate, dateStyle: NSDateFormatterStyle.ShortStyle, timeStyle: NSDateFormatterStyle.ShortStyle))
     }
     
 }
