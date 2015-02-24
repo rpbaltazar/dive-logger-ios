@@ -18,7 +18,12 @@ class DivesViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        self.divesListView?.reloadData()
+        prefs = NSUserDefaults.standardUserDefaults()
+        if(prefs.valueForKey("DIVELOGGER_AUTHKEY") != nil) {
+            self.divesListView?.delegate = self
+            self.divesListView?.dataSource = self
+            fetchDives()
+        }
     }
     
     override func viewDidLoad() {
@@ -29,40 +34,6 @@ class DivesViewController: UIViewController, UITableViewDataSource, UITableViewD
             self.performSegueWithIdentifier("dives_to_login", sender: self)
         } else {
             //TODO: check authkey validity
-            
-            self.divesListView?.delegate = self
-            self.divesListView?.dataSource = self
-            //self.divesListView?.registerClass(UITableViewCell.self, forCellReuseIdentifier: self.cellIdentifier)
-            self.divesListView?.reloadData()
-            
-            let email:NSString = prefs.valueForKey("DIVELOGGER_EMAIL") as NSString
-            let authkey:NSString = prefs.valueForKey("DIVELOGGER_AUTHKEY") as NSString
-            
-            //showSpinner()
-            let params = [
-                "user_email": email,
-                "user_token": authkey,
-            ]
-            //TODO: This should be done in a Api Manager
-            Alamofire.request(.GET, "http://underwater-me.herokuapp.com/api/v1/dives", parameters: params)
-                .responseJSON() {
-                    (request, response, data, error) in
-                    var statusCode = response?.statusCode
-                    if (statusCode >= 200 && statusCode < 300) {
-                        let dataRes = data as NSArray
-                        for diveJSON in dataRes {
-                            let diveDate:NSString = diveJSON["dive_date"] as NSString
-                            let diveLocation:NSString = diveJSON["location_name"] as NSString
-                            diveLogBook.addDive(diveDate, location: diveLocation)
-                        }
-                        self.divesListView?.reloadData()
-                    }
-                    else {
-                        //self.hideSpinner()
-                        //login error
-                        NSLog("Bode")
-                    }
-            }
         }
     }
 
@@ -99,5 +70,35 @@ class DivesViewController: UIViewController, UITableViewDataSource, UITableViewD
         }))
         
         self.presentViewController(alert, animated: true, completion: nil)
+    }
+    
+    private func fetchDives() {
+        let email:NSString = prefs.valueForKey("DIVELOGGER_EMAIL") as NSString
+        let authkey:NSString = prefs.valueForKey("DIVELOGGER_AUTHKEY") as NSString
+        //showSpinner()
+        let params = [
+            "user_email": email,
+            "user_token": authkey,
+        ]
+        //TODO: This should be done in a Api Manager
+        Alamofire.request(.GET, "http://underwater-me.herokuapp.com/api/v1/dives", parameters: params)
+            .responseJSON() {
+                (request, response, data, error) in
+                var statusCode = response?.statusCode
+                if (statusCode >= 200 && statusCode < 300) {
+                    let dataRes = data as NSArray
+                    for diveJSON in dataRes {
+                        let diveDate:NSString = diveJSON["dive_date"] as NSString
+                        let diveLocation:NSString = diveJSON["location_name"] as NSString
+                        diveLogBook.addDive(diveDate, location: diveLocation)
+                    }
+                    self.divesListView?.reloadData()
+                }
+                else {
+                    //self.hideSpinner()
+                    //login error
+                    NSLog("Bode")
+                }
+        }
     }
 }
