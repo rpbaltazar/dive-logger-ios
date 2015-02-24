@@ -6,29 +6,35 @@
 //  Copyright (c) 2015 Rui Baltazar. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 var diveLogBook:DiveLogBook = DiveLogBook()
 
-struct diveLog {
-    var date = ""
-    var location = ""
-}
-
 class DiveLogBook: NSObject {
-    var diveLogs = [diveLog]()
+    var dives = [DiveModel]()
     var lastUpdate:NSDate
     
     override init() {
         self.lastUpdate = NSDate(timeIntervalSince1970: 0)
     }
     
-    func addDive(date: NSString, location: NSString) {
+    func addDive(diveModel: DiveModel) {
+        dives.append(diveModel)
+        lastUpdate = NSDate()
+        NSLog("LAST UPDATED @ %@", NSDateFormatter.localizedStringFromDate(lastUpdate, dateStyle: NSDateFormatterStyle.ShortStyle, timeStyle: NSDateFormatterStyle.ShortStyle))
+    }
+    
+    func clear() {
+        dives = [DiveModel]()
+    }
+    /*func addDive(date: NSString, location: NSString) {
         let dive:diveLog = diveLog(date:date, location:location)
         diveLogs.append(dive)
         lastUpdate = NSDate()
 
         NSLog("LAST UPDATED @ %@", NSDateFormatter.localizedStringFromDate(lastUpdate, dateStyle: NSDateFormatterStyle.ShortStyle, timeStyle: NSDateFormatterStyle.ShortStyle))
-    }
+    }*/
+    
+    
     
 }
