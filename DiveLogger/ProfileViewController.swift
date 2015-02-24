@@ -14,9 +14,7 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        let appDomain = NSBundle.mainBundle().bundleIdentifier
-        NSUserDefaults.standardUserDefaults().removePersistentDomainForName(appDomain!)
-        
+        sessionManager.logoutUser()
         self.performSegueWithIdentifier("profile_to_login", sender: self)
     }
     

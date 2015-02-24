@@ -11,15 +11,11 @@ import Alamofire
 
 class DivesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    var prefs:NSUserDefaults!
-    //let cellIdentifier = "cellId"
-    
     @IBOutlet var divesListView: UITableView?
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        prefs = NSUserDefaults.standardUserDefaults()
-        if(prefs.valueForKey("DIVELOGGER_AUTHKEY") != nil) {
+        if(sessionManager.isUserLoggedIn()){
             self.divesListView?.delegate = self
             self.divesListView?.dataSource = self
             fetchDives()
@@ -29,8 +25,7 @@ class DivesViewController: UIViewController, UITableViewDataSource, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        prefs = NSUserDefaults.standardUserDefaults()
-        if(prefs.valueForKey("DIVELOGGER_AUTHKEY") == nil) {
+        if(!sessionManager.isUserLoggedIn()){
             self.performSegueWithIdentifier("dives_to_login", sender: self)
         } else {
             //TODO: check authkey validity
@@ -73,13 +68,8 @@ class DivesViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     private func fetchDives() {
-        let email:NSString = prefs.valueForKey("DIVELOGGER_EMAIL") as NSString
-        let authkey:NSString = prefs.valueForKey("DIVELOGGER_AUTHKEY") as NSString
         //showSpinner()
-        let params = [
-            "user_email": email,
-            "user_token": authkey,
-        ]
+        let params = sessionManager.getAuthParams()
         //TODO: This should be done in a Api Manager
         Alamofire.request(.GET, "http://underwater-me.herokuapp.com/api/v1/dives", parameters: params)
             .responseJSON() {

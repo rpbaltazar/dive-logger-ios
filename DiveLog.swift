@@ -8,7 +8,7 @@
 
 import UIKit
 
-var diveLogBook: DiveLogBook = DiveLogBook()
+var diveLogBook:DiveLogBook = DiveLogBook()
 
 struct diveLog {
     var date = ""

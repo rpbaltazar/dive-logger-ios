@@ -45,10 +45,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 let dataRes = data as NSDictionary
                 var statusCode = response?.statusCode
                 if (statusCode >= 200 && statusCode < 300) {
-                    let prefs:NSUserDefaults = NSUserDefaults.standardUserDefaults()
-                    prefs.setObject(dataRes["authentication_token"], forKey: "DIVELOGGER_AUTHKEY")
-                    prefs.setObject(dataRes["email"], forKey: "DIVELOGGER_EMAIL")
-                    prefs.synchronize()
+                    sessionManager.loginUser(dataRes["authentication_token"] as NSString, email: dataRes["email"] as NSString)
                     self.hideSpinner()
                     self.dismissViewControllerAnimated(true, completion: nil)
                 }

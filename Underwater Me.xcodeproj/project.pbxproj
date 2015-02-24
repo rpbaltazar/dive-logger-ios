@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		6686D45825B4275C5F1B6DEA /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4D18305EA2C85CD93923CFC /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		F87A31C61A9B65CB007EE505 /* DiveLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87A31C51A9B65CB007EE505 /* DiveLog.swift */; };
+		F8AE8A4C1A9C501B00ACC784 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AE8A4B1A9C501B00ACC784 /* SessionManager.swift */; };
 		F8B7C13E1A971FDC007E0CCF /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B7C13D1A971FDC007E0CCF /* ApiManager.swift */; };
 		F8B7C1421A973904007E0CCF /* DivesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B7C1411A973904007E0CCF /* DivesViewController.swift */; };
 		F8B7C1481A973F80007E0CCF /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B7C1471A973F80007E0CCF /* ProfileViewController.swift */; };
@@ -36,6 +37,7 @@
 		50FA0986FE12B08D437453AD /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		A4D18305EA2C85CD93923CFC /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F87A31C51A9B65CB007EE505 /* DiveLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DiveLog.swift; path = ../DiveLog.swift; sourceTree = "<group>"; };
+		F8AE8A4B1A9C501B00ACC784 /* SessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 		F8B7C13D1A971FDC007E0CCF /* ApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		F8B7C1411A973904007E0CCF /* DivesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DivesViewController.swift; sourceTree = "<group>"; };
 		F8B7C1471A973F80007E0CCF /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				F8B7C13D1A971FDC007E0CCF /* ApiManager.swift */,
+				F8AE8A4B1A9C501B00ACC784 /* SessionManager.swift */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -325,6 +328,7 @@
 				F8BE0E9E1A920123001E4964 /* SignupViewController.swift in Sources */,
 				F87A31C61A9B65CB007EE505 /* DiveLog.swift in Sources */,
 				F8B7C1421A973904007E0CCF /* DivesViewController.swift in Sources */,
+				F8AE8A4C1A9C501B00ACC784 /* SessionManager.swift in Sources */,
 				F8BE0E7C1A91FD39001E4964 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
