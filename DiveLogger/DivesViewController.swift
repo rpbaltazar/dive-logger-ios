@@ -65,6 +65,8 @@ class DivesViewController: UIViewController, UITableViewDataSource, UITableViewD
         self.presentViewController(alert, animated: true, completion: nil)
     }
     
+    //TODO: Probably I just need to do this once at least while there is only mobile app
+    //When moving to database implementation this should go away
     private func fetchDives() {
         var now = NSDate()
         if(now.timeIntervalSinceDate(diveLogBook.lastUpdate) > 3600){
@@ -85,8 +87,16 @@ class DivesViewController: UIViewController, UITableViewDataSource, UITableViewD
                         self.divesListView?.reloadData()
                     }
                     else {
-                        //self.hideSpinner()
-                        NSLog("Bode")
+                        if (statusCode == 400){
+                            let dataRes = data as NSDictionary
+                            let errorMessage:NSString = dataRes["error"] as NSString
+                            if (errorMessage == "Invalid login") {
+                                self.performSegueWithIdentifier("dives_to_login", sender: self)
+                            }
+                            else{
+                                NSLog(errorMessage)
+                            }
+                        }
                     }
             }
         }
