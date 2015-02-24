@@ -20,6 +20,7 @@
 		F8BE0E921A91FD39001E4964 /* DiveLoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BE0E911A91FD39001E4964 /* DiveLoggerTests.swift */; };
 		F8BE0E9C1A92008B001E4964 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BE0E9B1A92008B001E4964 /* LoginViewController.swift */; };
 		F8BE0E9E1A920123001E4964 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BE0E9D1A920123001E4964 /* SignupViewController.swift */; };
+		F8F8CF281A9CA9B50065AE2E /* DiveModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F8CF271A9CA9B50065AE2E /* DiveModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		F8BE0E911A91FD39001E4964 /* DiveLoggerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiveLoggerTests.swift; sourceTree = "<group>"; };
 		F8BE0E9B1A92008B001E4964 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F8BE0E9D1A920123001E4964 /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		F8F8CF271A9CA9B50065AE2E /* DiveModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiveModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				F87A31C51A9B65CB007EE505 /* DiveLog.swift */,
+				F8F8CF271A9CA9B50065AE2E /* DiveModel.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -323,6 +326,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8B7C1481A973F80007E0CCF /* ProfileViewController.swift in Sources */,
+				F8F8CF281A9CA9B50065AE2E /* DiveModel.swift in Sources */,
 				F8BE0E9C1A92008B001E4964 /* LoginViewController.swift in Sources */,
 				F8B7C13E1A971FDC007E0CCF /* ApiManager.swift in Sources */,
 				F8BE0E9E1A920123001E4964 /* SignupViewController.swift in Sources */,
