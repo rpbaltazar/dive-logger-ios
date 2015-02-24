@@ -9,13 +9,15 @@
 import UIKit
 
 class ProfileViewController: UIViewController, UITextFieldDelegate {
-    var prefs:NSUserDefaults!
 
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet weak var diveCount: UILabel!
+    @IBOutlet weak var logoutButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        sessionManager.logoutUser()
-        self.performSegueWithIdentifier("profile_to_login", sender: self)
     }
     
     override func didReceiveMemoryWarning() {
@@ -23,4 +25,8 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func logoutUser(sender: AnyObject) {
+        sessionManager.logoutUser()
+        self.performSegueWithIdentifier("profile_to_login", sender: self)
+    }
 }
