@@ -17,7 +17,7 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        self.navigationController?.navigationBar.topItem?.title = "Profile"
     }
     
     override func didReceiveMemoryWarning() {

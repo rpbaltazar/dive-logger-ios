@@ -30,6 +30,8 @@ class DivesViewController: UIViewController, UITableViewDataSource, UITableViewD
         if(!sessionManager.isUserLoggedIn()){
             self.performSegueWithIdentifier("dives_to_login", sender: self)
         }
+        
+        self.navigationController?.navigationBar.topItem?.title = "My Dives"
     }
 
     override func didReceiveMemoryWarning() {
@@ -49,7 +51,10 @@ class DivesViewController: UIViewController, UITableViewDataSource, UITableViewD
         let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "test")
         let dive = diveLogBook.dives[indexPath.row]
         cell.textLabel!.text = dive.location
-        cell.detailTextLabel!.text = dive.date
+        
+        var dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "YYYY-MM-dd"
+        cell.detailTextLabel!.text = dateFormatter.stringFromDate(dive.date)
         return cell
     }
     
