@@ -30,6 +30,8 @@ class DivesViewController: UIViewController, UITableViewDataSource, UITableViewD
         if(!sessionManager.isUserLoggedIn()){
             self.performSegueWithIdentifier("dives_to_login", sender: self)
         }
+        
+//        self.navigationItem.title = "My Dives"
     }
 
     override func didReceiveMemoryWarning() {

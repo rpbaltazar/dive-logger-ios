@@ -167,7 +167,7 @@
                         <viewControllerLayoutGuide type="top" id="AYc-AJ-HWy"/>
                         <viewControllerLayoutGuide type="bottom" id="cho-bk-Hxq"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="gNP-Ey-6kl" customClass="I">
+                    <view key="view" contentMode="scaleToFill" id="gNP-Ey-6kl">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -264,7 +264,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.23137254900000001" green="0.23137254900000001" blue="0.23137254900000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.23137254901960785" green="0.23137254901960785" blue="0.23137254901960785" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="AJV-Fb-GNW" firstAttribute="leading" secondItem="iRt-mI-Jrb" secondAttribute="leading" id="1sF-Z8-eqP"/>
                             <constraint firstItem="AJV-Fb-GNW" firstAttribute="top" secondItem="iRt-mI-Jrb" secondAttribute="bottom" constant="38" id="2e6-bq-f7Q"/>
@@ -331,7 +331,7 @@
         <!--New Dive-->
         <scene sceneID="fy2-zb-ZOd">
             <objects>
-                <viewController title="New Dive" id="U5Q-l4-Lyi" sceneMemberID="viewController">
+                <viewController title="New Dive" id="U5Q-l4-Lyi" customClass="AddDiveViewController" customModule="Underwater_Me" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hDP-yr-q6i"/>
                         <viewControllerLayoutGuide type="bottom" id="Apl-qw-N5T"/>
@@ -339,9 +339,160 @@
                     <view key="view" contentMode="scaleToFill" id="hUj-pX-Q4l">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Location" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xXb-7Y-SiH">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="84" width="180" height="30"/>
+                                </variation>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Date" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MGR-ay-sTb">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="204" y="84" width="180" height="30"/>
+                                </variation>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Time out" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bKh-l7-4bK">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="156" y="134" width="120" height="30"/>
+                                </variation>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Bottom T." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fDX-cp-vfk">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="294" y="134" width="90" height="30"/>
+                                </variation>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Time In" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mQ6-FM-zeF">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="134" width="120" height="30"/>
+                                </variation>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Pressure In" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VAi-Sb-M6n">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="185" width="120" height="30"/>
+                                </variation>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Group" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="olJ-0B-Lka">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="294" y="185" width="90" height="30"/>
+                                </variation>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Comments..." translatesAutoresizingMaskIntoConstraints="NO" id="UCL-kJ-Cu8">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" spellCheckingType="yes"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="236" width="368" height="144"/>
+                                </variation>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uSN-cA-iXU">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.3921568627" green="0.85882352939999995" blue="0.73725490199999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="disabled">
+                                    <color key="titleColor" red="0.90588235289999997" green="0.90588235289999997" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="224" y="487" width="160" height="40"/>
+                                </variation>
+                                <connections>
+                                    <action selector="saveDive:" destination="U5Q-l4-Lyi" eventType="touchUpInside" id="cXZ-GA-ysY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ntt-3h-OAH">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.21145985140000001" blue="0.311873756" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="Clear form">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="487" width="160" height="40"/>
+                                </variation>
+                                <connections>
+                                    <action selector="clearForm:" destination="U5Q-l4-Lyi" eventType="touchUpInside" id="fNw-hp-wua"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Pressure Out" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gm5-sm-MaE">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="156" y="185" width="120" height="30"/>
+                                </variation>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.23137254901960785" green="0.23137254901960785" blue="0.23137254901960785" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="xXb-7Y-SiH"/>
+                                <exclude reference="MGR-ay-sTb"/>
+                                <exclude reference="bKh-l7-4bK"/>
+                                <exclude reference="fDX-cp-vfk"/>
+                                <exclude reference="mQ6-FM-zeF"/>
+                                <exclude reference="VAi-Sb-M6n"/>
+                                <exclude reference="olJ-0B-Lka"/>
+                                <exclude reference="UCL-kJ-Cu8"/>
+                                <exclude reference="uSN-cA-iXU"/>
+                                <exclude reference="Ntt-3h-OAH"/>
+                                <exclude reference="gm5-sm-MaE"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="xXb-7Y-SiH"/>
+                                <include reference="MGR-ay-sTb"/>
+                                <include reference="bKh-l7-4bK"/>
+                                <include reference="fDX-cp-vfk"/>
+                                <include reference="mQ6-FM-zeF"/>
+                                <include reference="VAi-Sb-M6n"/>
+                                <include reference="olJ-0B-Lka"/>
+                                <include reference="UCL-kJ-Cu8"/>
+                                <include reference="uSN-cA-iXU"/>
+                                <include reference="Ntt-3h-OAH"/>
+                                <include reference="gm5-sm-MaE"/>
+                            </mask>
+                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Log Dive" image="AddDive" id="fL5-8w-lYC"/>
+                    <connections>
+                        <outlet property="actualBottomTimeTextView" destination="fDX-cp-vfk" id="faG-2f-XNi"/>
+                        <outlet property="clearFormButton" destination="Ntt-3h-OAH" id="xnG-JL-v8j"/>
+                        <outlet property="commentsTextView" destination="UCL-kJ-Cu8" id="4bL-iI-9lh"/>
+                        <outlet property="dateTextView" destination="MGR-ay-sTb" id="fy5-OE-EIi"/>
+                        <outlet property="locationTextView" destination="xXb-7Y-SiH" id="nU8-na-yyO"/>
+                        <outlet property="pressureGroupTextView" destination="olJ-0B-Lka" id="PdP-AE-xUE"/>
+                        <outlet property="pressureInTextView" destination="VAi-Sb-M6n" id="r6Z-yd-kDK"/>
+                        <outlet property="pressureOutTextView" destination="gm5-sm-MaE" id="Z6N-vb-3bH"/>
+                        <outlet property="saveDiveButton" destination="uSN-cA-iXU" id="67H-BT-Kaz"/>
+                        <outlet property="timeInTextView" destination="mQ6-FM-zeF" id="vmL-tj-ilg"/>
+                        <outlet property="timeOutTextView" destination="bKh-l7-4bK" id="NyH-U1-vvF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H0u-w3-xTy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -610,6 +761,6 @@
         <image name="Profile" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="mE6-V4-C1S"/>
+        <segue reference="wjU-Fe-ei8"/>
     </inferredMetricsTieBreakers>
 </document>

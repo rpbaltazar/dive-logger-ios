@@ -17,6 +17,7 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //self.navigationItem.title = "Profile"
         // Do any additional setup after loading the view.
     }
     
