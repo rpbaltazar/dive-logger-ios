@@ -48,7 +48,7 @@ extension Alamofire.Request {
         let serializer: Serializer = { (request, response, data) in
             let JSONSerializer = Request.JSONResponseSerializer(options: .AllowFragments)
             let (JSON: AnyObject?, serializationError) = JSONSerializer(request, response, data)
-            if response != nil && JSON != nil {
+            if response != nil && JSON != nil && response?.statusCode >= 200 && response?.statusCode < 300 {
                 return (T.collection(response: response!, representation: JSON!), nil)
             } else {
                 return (nil, serializationError)

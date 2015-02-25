@@ -14,10 +14,10 @@ class AddDiveViewController: UIViewController, UITextFieldDelegate, UITextViewDe
     @IBOutlet weak var dateTextView: UITextField!
     @IBOutlet weak var timeInTextView: UITextField!
     @IBOutlet weak var timeOutTextView: UITextField!
-    @IBOutlet weak var actualBottomTimeTextView: UITextField!
+    //@IBOutlet weak var actualBottomTimeTextView: UITextField!
     @IBOutlet weak var pressureInTextView: UITextField!
     @IBOutlet weak var pressureOutTextView: UITextField!
-    @IBOutlet weak var pressureGroupTextView: UITextField!
+    //@IBOutlet weak var pressureGroupTextView: UITextField!
     @IBOutlet weak var commentsTextView: UITextView!
     
     @IBOutlet weak var clearFormButton: UIButton!
@@ -32,10 +32,10 @@ class AddDiveViewController: UIViewController, UITextFieldDelegate, UITextViewDe
         self.dateTextView.delegate = self
         self.timeInTextView.delegate = self
         self.timeOutTextView.delegate = self
-        self.actualBottomTimeTextView.delegate = self
+        //self.actualBottomTimeTextView.delegate = self
         self.pressureInTextView.delegate = self
         self.pressureOutTextView.delegate = self
-        self.pressureGroupTextView.delegate = self
+        //self.pressureGroupTextView.delegate = self
         self.commentsTextView.delegate = self
         
         self.navigationController?.navigationBar.topItem?.title = "Add Dive"
