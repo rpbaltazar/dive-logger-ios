@@ -162,7 +162,7 @@
         <!--Profile-->
         <scene sceneID="3ax-0D-QjF">
             <objects>
-                <viewController id="PP0-yH-8ac" customClass="ProfileViewController" customModule="Underwater_Me" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Profile" id="PP0-yH-8ac" customClass="ProfileViewController" customModule="Underwater_Me" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="AYc-AJ-HWy"/>
                         <viewControllerLayoutGuide type="bottom" id="cho-bk-Hxq"/>
@@ -498,10 +498,10 @@
             </objects>
             <point key="canvasLocation" x="1267.5" y="-511"/>
         </scene>
-        <!--Dives-->
+        <!--My Dives-->
         <scene sceneID="rXz-e5-V6j">
             <objects>
-                <viewController id="T7T-3s-t9o" customClass="DivesViewController" customModule="Underwater_Me" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="My Dives" id="T7T-3s-t9o" customClass="DivesViewController" customModule="Underwater_Me" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="U46-TD-Pdi"/>
                         <viewControllerLayoutGuide type="bottom" id="7m2-64-Ieg"/>

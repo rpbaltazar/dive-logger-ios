@@ -37,8 +37,8 @@ class AddDiveViewController: UIViewController, UITextFieldDelegate, UITextViewDe
         self.pressureOutTextView.delegate = self
         self.pressureGroupTextView.delegate = self
         self.commentsTextView.delegate = self
-
-        //self.setNeedsStatusBarAppearanceUpdate()
+        
+        self.navigationController?.navigationBar.topItem?.title = "Add Dive"
     }
     
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
