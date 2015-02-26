@@ -88,6 +88,22 @@ class AddDiveViewController: UIViewController, UITextFieldDelegate, UITextViewDe
     }
     
     @IBAction func saveDive(sender: AnyObject) {
+        var dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "YYYY-MM-dd"
+        
+        let diveDate = dateFormatter.dateFromString(dateTextView.text)!
+        
+        dateFormatter.dateFormat = "hh:mm"
+        let timeIn = dateFormatter.dateFromString(timeInTextView.text)!
+        let timeOut = dateFormatter.dateFromString(timeOutTextView.text)!
+        
+        let pressureIn = pressureInTextView.text.toInt()!
+        let pressureOut = pressureOutTextView.text.toInt()!
+
+        let newDive = DiveModel(location: locationTextView.text, date: diveDate, pressureIn: pressureIn, pressureOut: pressureOut, timeIn: timeIn, timeOut: timeOut)
+        
+        diveLogBook.addDive(newDive)
+        clearForm(sender)
     }
     
     private func animateTextView(textField: UITextView, up: Bool) {

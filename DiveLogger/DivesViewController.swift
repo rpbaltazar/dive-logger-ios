@@ -51,7 +51,10 @@ class DivesViewController: UIViewController, UITableViewDataSource, UITableViewD
         let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "test")
         let dive = diveLogBook.dives[indexPath.row]
         cell.textLabel!.text = dive.location
-        cell.detailTextLabel!.text = dive.date
+        
+        var dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "YYYY-MM-dd"
+        cell.detailTextLabel!.text = dateFormatter.stringFromDate(dive.date)
         return cell
     }
     
