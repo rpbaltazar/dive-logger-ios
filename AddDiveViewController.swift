@@ -46,6 +46,7 @@ class AddDiveViewController: UIViewController, UITextFieldDelegate, UITextViewDe
     }
     
     func textViewDidBeginEditing(textView: UITextView) {
+        self.animateTextView(textView, up: true)
         if(textView == self.commentsTextView) {
             if(textView.text == "Comments...") {
                 textView.text = ""
@@ -56,6 +57,7 @@ class AddDiveViewController: UIViewController, UITextFieldDelegate, UITextViewDe
     }
     
     func textViewDidEndEditing(textView: UITextView) {
+        self.animateTextView(textView, up: false)
         if(textView == self.commentsTextView) {
             if(textView.text == "") {
                 textView.text = "Comments..."
@@ -115,5 +117,19 @@ class AddDiveViewController: UIViewController, UITextFieldDelegate, UITextViewDe
     }
     
     @IBAction func saveDive(sender: AnyObject) {
+    }
+    
+    private func animateTextView(textField: UITextView, up: Bool) {
+        let movementDistance:CGFloat = 120.0
+        let movementDuration:NSTimeInterval = 0.3
+        
+        let movement:CGFloat = (up ? -movementDistance : movementDistance)
+        
+        UIView.beginAnimations("anim", context: nil)
+        UIView.setAnimationBeginsFromCurrentState(true)
+        UIView.setAnimationDuration(movementDuration)
+        
+        self.view.frame = CGRectOffset(self.view.frame, 0, movement);
+        UIView.commitAnimations()
     }
 }

@@ -565,6 +565,8 @@
                         </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Log Dive" image="AddDive" id="fL5-8w-lYC"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="400" height="600"/>
                     <connections>
                         <outlet property="clearFormButton" destination="Ntt-3h-OAH" id="xnG-JL-v8j"/>
                         <outlet property="commentsTextView" destination="UCL-kJ-Cu8" id="4bL-iI-9lh"/>
