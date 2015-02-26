@@ -102,8 +102,17 @@ class AddDiveViewController: UIViewController, UITextFieldDelegate, UITextViewDe
 
         let newDive = DiveModel(location: locationTextView.text, date: diveDate, pressureIn: pressureIn, pressureOut: pressureOut, timeIn: timeIn, timeOut: timeOut)
         
-        diveLogBook.addDive(newDive)
-        clearForm(sender)
+        ApiManager.postNewDive(newDive,
+            successCallback: {(dive) -> Void in
+                if let dive = dive? {
+                    diveLogBook.addDive(dive)
+                    self.clearForm(sender)
+                }
+            },
+            failureCallback: {(errorCode, errorMessage) -> Void in
+                
+            }
+        )
     }
     
     private func animateTextView(textField: UITextView, up: Bool) {

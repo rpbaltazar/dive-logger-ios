@@ -63,6 +63,11 @@ extension Alamofire.Request {
 
 public class ApiManager {
     
+    class var baseURL:String {
+        //return "http://192.168.1.252:3000/api/v1/"
+        return "http://underwater-me.herokuapp.com/api/v1/"
+    }
+    
     /*class func login(params:[String:AnyObject], callback: (NSHTTPURLResponse, NSDictionary) -> Void){
         Alamofire.request(.POST, "http://underwater-me.herokuapp.com/api/v1/sessions", parameters: params, encoding: .JSON)
             .responseJSON() {
@@ -82,12 +87,38 @@ public class ApiManager {
     }*/
     
     class func getUserDives(successCallback: ([DiveModel]?) -> Void, failureCallback: (Int, String) -> Void) {
+        let url = baseURL + "dives"
         let params = sessionManager.getAuthParams()
-        Alamofire.request(.GET, "http://underwater-me.herokuapp.com/api/v1/dives", parameters: params)
+        Alamofire.request(.GET, url, parameters: params)
             .responseCollection { (request, response, dives: [DiveModel]?, error) in
                 var statusCode = response?.statusCode
                 if (statusCode >= 200 && statusCode < 300) {
                     successCallback(dives)
+                }
+                else {
+                    failureCallback(statusCode!, "")
+                }
+        }
+    }
+    
+    class func postNewDive(dive: DiveModel, successCallback: (DiveModel?) -> Void, failureCallback: (Int, String) -> Void) {
+        var authParams = sessionManager.getAuthParams()
+        var requestParams = dive.toParams()
+        
+        var paramsDictonary = [String: AnyObject]()
+        
+        paramsDictonary["dive"] = requestParams
+        for (key, value) in authParams {
+            paramsDictonary[key] = value
+        }
+        
+        let url = baseURL + "dives"
+        Alamofire.request(.POST, url, parameters: paramsDictonary, encoding: .JSON)
+            .responseJSON { (request, response, data, error) in
+                var dive = DiveModel(response: response!, representation: data!)
+                var statusCode = response?.statusCode
+                if (statusCode >= 200 && statusCode < 300) {
+                    successCallback(dive)
                 }
                 else {
                     failureCallback(statusCode!, "")

@@ -26,15 +26,5 @@ class DiveLogBook: NSObject {
     
     func clear() {
         dives = [DiveModel]()
-    }
-    /*func addDive(date: NSString, location: NSString) {
-        let dive:diveLog = diveLog(date:date, location:location)
-        diveLogs.append(dive)
-        lastUpdate = NSDate()
-
-        NSLog("LAST UPDATED @ %@", NSDateFormatter.localizedStringFromDate(lastUpdate, dateStyle: NSDateFormatterStyle.ShortStyle, timeStyle: NSDateFormatterStyle.ShortStyle))
-    }*/
-    
-    
-    
+    }    
 }

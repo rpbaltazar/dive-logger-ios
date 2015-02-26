@@ -64,5 +64,44 @@ final class DiveModel: ResponseObjectSerializable, ResponseCollectionSerializabl
     func toDic() -> Dictionary<String,AnyObject> {
         return ["location_name": self.location, "dive_date":self.date]
     }
+    
+    func toParams() -> [String: String] {
+        var dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "hh:mm"
+        
+        var timeInString = ""
+        var timeOutString = ""
+        if self.timeIn != nil {
+            timeInString = dateFormatter.stringFromDate(self.timeIn!)
+        }
+        
+        if self.timeOut != nil {
+            timeOutString = dateFormatter.stringFromDate(self.timeOut!)
+        }
+        
+        dateFormatter.dateFormat = "YYYY-MM-dd"
+        let dateInString = dateFormatter.stringFromDate(self.date)
+        
+        var pressureInString = ""
+        if self.pressureIn != nil {
+            pressureInString = String(self.pressureIn!)
+        }
+        
+        var pressureOutString = ""
+        if self.pressureOut != nil {
+            pressureOutString = String(self.pressureOut!)
+        }
+        
+        let parameterizedDive = [
+            "location_name": self.location,
+            "dive_date": dateInString,
+            "time_in": timeInString,
+            "time_out": timeOutString,
+            "pressure_in": pressureInString,
+            "pressure_out": pressureOutString
+        ]
+        
+        return parameterizedDive
+    }
 }
 
