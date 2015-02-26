@@ -71,7 +71,6 @@ class AddDiveViewController: UIViewController, UITextFieldDelegate, UITextViewDe
         return true
     }
     
-    //TODO: Clean up this method
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
         if(textField == self.timeInTextView || textField == self.timeOutTextView) {
             
@@ -80,23 +79,18 @@ class AddDiveViewController: UIViewController, UITextFieldDelegate, UITextViewDe
             let newString:NSString = currentString.stringByReplacingCharactersInRange(range, withString: string)
             let newStringLength = newString.length
             
-            if newStringLength > 5 {
+            switch newStringLength {
+            case 0:
+                return true
+            case 1...2:
+                timeFormatExpression = "^[0-9]{1,2}$"
+            case 3:
+                timeFormatExpression = "^[0-9]{1,2}\\:$"
+            case 4...5:
+                timeFormatExpression = "^[0-9]{1,2}\\:[0-9]{1,2}$"
+            default:
                 return false
             }
-            
-            if newStringLength == 0 {
-                return true
-            }
-            
-            if newStringLength > 0 && newStringLength < 3 {
-                timeFormatExpression = "[0-9]{1,2}"
-            } else if newStringLength == 3 {
-                timeFormatExpression = "[0-9]{1,2}\\:"
-            } else if newStringLength > 3 {
-                timeFormatExpression = "[0-9]{1,2}\\:[0-9]{1,2}"
-            }
-            
-            //let expression = "^([0-9]{1,2})?\\:?([0-9]{1,2})?$"
             
             let regex = NSRegularExpression(pattern: timeFormatExpression, options: NSRegularExpressionOptions.CaseInsensitive, error: nil)
             let numberOfMatches = regex?.numberOfMatchesInString(newString, options: nil, range: NSMakeRange(0, newString.length))

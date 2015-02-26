@@ -360,11 +360,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Pressure In" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="VAi-Sb-M6n">
-                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uSN-cA-iXU">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <color key="backgroundColor" red="0.3921568627" green="0.85882352939999995" blue="0.73725490199999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -430,6 +425,11 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" spellCheckingType="yes"/>
                             </textView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Pressure In" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="VAi-Sb-M6n">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.23137254901960785" green="0.23137254901960785" blue="0.23137254901960785" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -473,22 +473,18 @@
                                 <exclude reference="MGR-ay-sTb"/>
                                 <exclude reference="bKh-l7-4bK"/>
                                 <exclude reference="mQ6-FM-zeF"/>
-                                <exclude reference="VAi-Sb-M6n"/>
                                 <exclude reference="uSN-cA-iXU"/>
                                 <exclude reference="Ntt-3h-OAH"/>
                                 <exclude reference="gm5-sm-MaE"/>
                                 <exclude reference="UCL-kJ-Cu8"/>
+                                <exclude reference="VAi-Sb-M6n"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="Qeo-TT-4rD"/>
-                                <exclude reference="ayJ-YA-GS8"/>
-                                <exclude reference="Mt2-Li-odd"/>
-                                <exclude reference="tm5-8B-sSc"/>
-                                <exclude reference="5Wh-tC-bQz"/>
-                                <exclude reference="V27-Yn-tt0"/>
                                 <exclude reference="DCm-Ji-Qgy"/>
                                 <exclude reference="bHb-Bk-EUU"/>
                                 <exclude reference="pUJ-Lf-Ko5"/>
+                                <exclude reference="5Wh-tC-bQz"/>
+                                <exclude reference="V27-Yn-tt0"/>
                                 <exclude reference="0Vd-32-RiA"/>
                                 <exclude reference="4c0-Tz-3lM"/>
                                 <exclude reference="ENE-rP-ueF"/>
@@ -499,13 +495,13 @@
                                 <exclude reference="lf4-EJ-6xC"/>
                                 <exclude reference="pRF-qg-Qqp"/>
                                 <exclude reference="qFN-S9-vD3"/>
-                                <exclude reference="Zpb-55-pHU"/>
-                                <exclude reference="e8z-cG-t6V"/>
-                                <exclude reference="l2i-sa-wOY"/>
-                                <exclude reference="lvY-zc-4YJ"/>
                                 <exclude reference="JHt-6l-aML"/>
                                 <exclude reference="Q43-i0-fl3"/>
                                 <exclude reference="hN8-sI-SS9"/>
+                                <exclude reference="Mt2-Li-odd"/>
+                                <exclude reference="tm5-8B-sSc"/>
+                                <exclude reference="Qeo-TT-4rD"/>
+                                <exclude reference="ayJ-YA-GS8"/>
                                 <exclude reference="RSW-wy-bGg"/>
                                 <exclude reference="syB-eJ-H5V"/>
                                 <exclude reference="54V-Ow-548"/>
@@ -513,6 +509,10 @@
                                 <exclude reference="gcv-C5-fMx"/>
                                 <exclude reference="sqM-k5-HDf"/>
                                 <exclude reference="uZt-SZ-II9"/>
+                                <exclude reference="Zpb-55-pHU"/>
+                                <exclude reference="e8z-cG-t6V"/>
+                                <exclude reference="l2i-sa-wOY"/>
+                                <exclude reference="lvY-zc-4YJ"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -521,22 +521,18 @@
                                 <include reference="MGR-ay-sTb"/>
                                 <include reference="bKh-l7-4bK"/>
                                 <include reference="mQ6-FM-zeF"/>
-                                <include reference="VAi-Sb-M6n"/>
                                 <include reference="uSN-cA-iXU"/>
                                 <include reference="Ntt-3h-OAH"/>
                                 <include reference="gm5-sm-MaE"/>
                                 <include reference="UCL-kJ-Cu8"/>
+                                <include reference="VAi-Sb-M6n"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="Qeo-TT-4rD"/>
-                                <include reference="ayJ-YA-GS8"/>
-                                <include reference="Mt2-Li-odd"/>
-                                <include reference="tm5-8B-sSc"/>
-                                <include reference="5Wh-tC-bQz"/>
-                                <include reference="V27-Yn-tt0"/>
                                 <include reference="DCm-Ji-Qgy"/>
                                 <include reference="bHb-Bk-EUU"/>
                                 <include reference="pUJ-Lf-Ko5"/>
+                                <include reference="5Wh-tC-bQz"/>
+                                <include reference="V27-Yn-tt0"/>
                                 <include reference="0Vd-32-RiA"/>
                                 <include reference="4c0-Tz-3lM"/>
                                 <include reference="ENE-rP-ueF"/>
@@ -547,13 +543,13 @@
                                 <include reference="lf4-EJ-6xC"/>
                                 <include reference="pRF-qg-Qqp"/>
                                 <include reference="qFN-S9-vD3"/>
-                                <include reference="Zpb-55-pHU"/>
-                                <include reference="e8z-cG-t6V"/>
-                                <include reference="l2i-sa-wOY"/>
-                                <include reference="lvY-zc-4YJ"/>
                                 <include reference="JHt-6l-aML"/>
                                 <include reference="Q43-i0-fl3"/>
                                 <include reference="hN8-sI-SS9"/>
+                                <include reference="Mt2-Li-odd"/>
+                                <include reference="tm5-8B-sSc"/>
+                                <include reference="Qeo-TT-4rD"/>
+                                <include reference="ayJ-YA-GS8"/>
                                 <include reference="RSW-wy-bGg"/>
                                 <include reference="syB-eJ-H5V"/>
                                 <include reference="54V-Ow-548"/>
@@ -561,6 +557,10 @@
                                 <include reference="gcv-C5-fMx"/>
                                 <include reference="sqM-k5-HDf"/>
                                 <include reference="uZt-SZ-II9"/>
+                                <include reference="Zpb-55-pHU"/>
+                                <include reference="e8z-cG-t6V"/>
+                                <include reference="l2i-sa-wOY"/>
+                                <include reference="lvY-zc-4YJ"/>
                             </mask>
                         </variation>
                     </view>
@@ -600,9 +600,6 @@
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="fhZ-eG-AHO">
                                 <rect key="frame" x="-10" y="-10" width="20" height="20"/>
                                 <color key="color" red="0.3921568627" green="0.85882352939999995" blue="0.73725490199999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="0.0" y="258" width="400" height="37"/>
-                                </variation>
                             </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
