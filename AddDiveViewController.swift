@@ -23,6 +23,9 @@ class AddDiveViewController: UIViewController, UITextFieldDelegate, UITextViewDe
     @IBOutlet weak var clearFormButton: UIButton!
     @IBOutlet weak var saveDiveButton: UIButton!
     
+    var datePickerView:UIDatePicker = UIDatePicker()
+
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,38 +76,6 @@ class AddDiveViewController: UIViewController, UITextFieldDelegate, UITextViewDe
         return true
     }
     
-    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
-        if(textField == self.timeInTextView || textField == self.timeOutTextView) {
-            
-            var timeFormatExpression = "(^$)|([0-9]{1,2})|([0-9]{1,2}\\:)|([0-9]{1,2}\\:[0-9]{1,2})"
-            let currentString = textField.text as NSString
-            let newString:NSString = currentString.stringByReplacingCharactersInRange(range, withString: string)
-            let newStringLength = newString.length
-            
-            switch newStringLength {
-            case 0:
-                return true
-            case 1...2:
-                timeFormatExpression = "^[0-9]{1,2}$"
-            case 3:
-                timeFormatExpression = "^[0-9]{1,2}\\:$"
-            case 4...5:
-                timeFormatExpression = "^[0-9]{1,2}\\:[0-9]{1,2}$"
-            default:
-                return false
-            }
-            
-            let regex = NSRegularExpression(pattern: timeFormatExpression, options: NSRegularExpressionOptions.CaseInsensitive, error: nil)
-            let numberOfMatches = regex?.numberOfMatchesInString(newString, options: nil, range: NSMakeRange(0, newString.length))
-            
-            if (numberOfMatches == 0){
-                return false
-            }
-        }
-        
-        return true
-    }
-    
     @IBAction func clearForm(sender: AnyObject) {
         self.locationTextView.text = ""
         self.dateTextView.text = ""
@@ -131,5 +102,40 @@ class AddDiveViewController: UIViewController, UITextFieldDelegate, UITextViewDe
         
         self.view.frame = CGRectOffset(self.view.frame, 0, movement);
         UIView.commitAnimations()
+    }
+    
+    @IBAction func datePickerShow(dateTextView: UITextView) {
+        let now = NSDate()
+        self.datePickerView.maximumDate = now
+        self.datePickerView.datePickerMode = .Date
+        
+        dateTextView.inputView = datePickerView
+        datePickerView.addTarget(self, action: "handleDatePicker", forControlEvents: .ValueChanged)
+        handleDatePicker()
+    }
+
+    @IBAction func timePicker(timeTextView: UITextField) {
+        self.datePickerView.datePickerMode = .Time
+        
+        timeTextView.inputView = datePickerView
+        datePickerView.addTarget(self, action: "handleTimePicker", forControlEvents: .ValueChanged)
+        handleTimePicker()
+    }
+    
+    func handleDatePicker() {
+        var dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "YYYY-MM-dd"
+        dateTextView.text = dateFormatter.stringFromDate(self.datePickerView.date)
+    }
+    
+    func handleTimePicker() {
+        var dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "hh:mm"
+        
+        if timeInTextView.isFirstResponder() {
+            timeInTextView.text = dateFormatter.stringFromDate(self.datePickerView.date)
+        } else if timeOutTextView.isFirstResponder() {
+            timeOutTextView.text = dateFormatter.stringFromDate(self.datePickerView.date)
+        }
     }
 }
