@@ -508,7 +508,7 @@
 				INFOPLIST_FILE = DiveLoggerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "Underwater MeTests";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DiveLogger.app/DiveLogger";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Underwater Me.app/Underwater Me";
 			};
 			name = Debug;
 		};
@@ -523,7 +523,7 @@
 				INFOPLIST_FILE = DiveLoggerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "Underwater MeTests";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DiveLogger.app/DiveLogger";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Underwater Me.app/Underwater Me";
 			};
 			name = Release;
 		};
