@@ -10,6 +10,8 @@
 	<string>Underwater Me</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+		<key>6F6C0B96EFB04E6DE017E9AE57704A27A1443EC4</key>
+		<string>https://github.com/dtissera/DTIToastCenter-Swift.git</string>
 		<key>F808A1828D8C12F5BE4BDE08CF2E38B5CCFC0C90</key>
 		<string>github.com:rpbaltazar/dive-logger-ios.git</string>
 	</dict>
@@ -17,6 +19,8 @@
 	<string>Underwater Me.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
+		<key>6F6C0B96EFB04E6DE017E9AE57704A27A1443EC4</key>
+		<string>../DTIToastCenter-Swift/</string>
 		<key>F808A1828D8C12F5BE4BDE08CF2E38B5CCFC0C90</key>
 		<string>..</string>
 	</dict>
@@ -35,6 +39,14 @@
 			<string>F808A1828D8C12F5BE4BDE08CF2E38B5CCFC0C90</string>
 			<key>IDESourceControlWCCName</key>
 			<string>DiveLogger</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>6F6C0B96EFB04E6DE017E9AE57704A27A1443EC4</string>
+			<key>IDESourceControlWCCName</key>
+			<string>DTIToastCenter-Swift</string>
 		</dict>
 	</array>
 </dict>

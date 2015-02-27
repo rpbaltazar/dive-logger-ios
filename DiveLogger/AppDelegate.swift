@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import DTIToastCenter
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -28,6 +29,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //Set status bar as light
         UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent
+        
+        //Toast Messages initialization
+        DTIToastCenter.defaultCenter.registerCenter()
         
         return true
     }

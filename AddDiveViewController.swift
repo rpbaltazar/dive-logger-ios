@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import DTIToastCenter
 
 class AddDiveViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate {
     
@@ -105,6 +106,9 @@ class AddDiveViewController: UIViewController, UITextFieldDelegate, UITextViewDe
         ApiManager.postNewDive(newDive,
             successCallback: {(dive) -> Void in
                 if let dive = dive? {
+                    
+                    DTIToastCenter.defaultCenter.makeText("New Dive saved! Happy diving!")
+                    
                     diveLogBook.addDive(dive)
                     self.clearForm(sender)
                 }

@@ -1,0 +1,3 @@
+[submodule "DTIToastCenter-Swift"]
+	path = DTIToastCenter-Swift
+	url = https://github.com/dtissera/DTIToastCenter-Swift.git

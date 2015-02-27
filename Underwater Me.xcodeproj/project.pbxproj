@@ -23,6 +23,7 @@
 		F8E6D7E31A9E001000283EEA /* AddDiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E6D7E21A9E001000283EEA /* AddDiveViewController.swift */; };
 		F8E6D7E51A9E0A5100283EEA /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E6D7E41A9E0A5100283EEA /* UIColorExtension.swift */; };
 		F8F8CF281A9CA9B50065AE2E /* DiveModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F8CF271A9CA9B50065AE2E /* DiveModel.swift */; };
+		F8FBA8D91A9FEBA80021274F /* DTIToastCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8FBA8D41A9FE9E80021274F /* DTIToastCenter.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +33,27 @@
 			proxyType = 1;
 			remoteGlobalIDString = F8BE0E751A91FD39001E4964;
 			remoteInfo = DiveLogger;
+		};
+		F8FBA8D31A9FE9E80021274F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F8FBA8CE1A9FE9E80021274F /* DTIToastCenter.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2583A75E19FD08BB00B56AA1;
+			remoteInfo = DTIToastCenter;
+		};
+		F8FBA8D51A9FE9E80021274F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F8FBA8CE1A9FE9E80021274F /* DTIToastCenter.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2583A76919FD08BB00B56AA1;
+			remoteInfo = DTIToastCenterTests;
+		};
+		F8FBA8D71A9FE9F50021274F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F8FBA8CE1A9FE9E80021274F /* DTIToastCenter.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 2583A75D19FD08BB00B56AA1;
+			remoteInfo = DTIToastCenter;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -58,6 +80,7 @@
 		F8E6D7E21A9E001000283EEA /* AddDiveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddDiveViewController.swift; sourceTree = "<group>"; };
 		F8E6D7E41A9E0A5100283EEA /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		F8F8CF271A9CA9B50065AE2E /* DiveModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiveModel.swift; sourceTree = "<group>"; };
+		F8FBA8CE1A9FE9E80021274F /* DTIToastCenter.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DTIToastCenter.xcodeproj; path = "DTIToastCenter-Swift/DTIToastCenter.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8FBA8D91A9FEBA80021274F /* DTIToastCenter.framework in Frameworks */,
 				6686D45825B4275C5F1B6DEA /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -118,6 +142,7 @@
 		F8BE0E6D1A91FD39001E4964 = {
 			isa = PBXGroup;
 			children = (
+				F8FBA8CE1A9FE9E80021274F /* DTIToastCenter.xcodeproj */,
 				F8BE0E781A91FD39001E4964 /* DiveLogger */,
 				F8BE0E8E1A91FD39001E4964 /* DiveLoggerTests */,
 				F8BE0E771A91FD39001E4964 /* Products */,
@@ -188,6 +213,15 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
+		F8FBA8CF1A9FE9E80021274F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F8FBA8D41A9FE9E80021274F /* DTIToastCenter.framework */,
+				F8FBA8D61A9FE9E80021274F /* DTIToastCenterTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -205,6 +239,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				F8FBA8D81A9FE9F50021274F /* PBXTargetDependency */,
 			);
 			name = "Underwater Me";
 			productName = DiveLogger;
@@ -259,6 +294,12 @@
 			mainGroup = F8BE0E6D1A91FD39001E4964;
 			productRefGroup = F8BE0E771A91FD39001E4964 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = F8FBA8CF1A9FE9E80021274F /* Products */;
+					ProjectRef = F8FBA8CE1A9FE9E80021274F /* DTIToastCenter.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				F8BE0E751A91FD39001E4964 /* Underwater Me */,
@@ -266,6 +307,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		F8FBA8D41A9FE9E80021274F /* DTIToastCenter.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = DTIToastCenter.framework;
+			remoteRef = F8FBA8D31A9FE9E80021274F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F8FBA8D61A9FE9E80021274F /* DTIToastCenterTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = DTIToastCenterTests.xctest;
+			remoteRef = F8FBA8D51A9FE9E80021274F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		F8BE0E741A91FD39001E4964 /* Resources */ = {
@@ -369,6 +427,11 @@
 			isa = PBXTargetDependency;
 			target = F8BE0E751A91FD39001E4964 /* Underwater Me */;
 			targetProxy = F8BE0E8C1A91FD39001E4964 /* PBXContainerItemProxy */;
+		};
+		F8FBA8D81A9FE9F50021274F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DTIToastCenter;
+			targetProxy = F8FBA8D71A9FE9F50021274F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
